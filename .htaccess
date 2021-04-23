@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ([a-zA-Z_]+)	index.php?p=en.Page.Home.$1
+
+ErrorDocument 404 /not_found
